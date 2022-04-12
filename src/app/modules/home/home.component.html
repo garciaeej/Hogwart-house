@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col md-lg-12 justify-content-center">
+      <div class=" pb-1 text-center">
+
+        <h3 class="title">{{house}}</h3>
+      </div>
+      <!-- Validamos si la propiedad house tiene valor de lo contrario muestra el ng-Template -->
+      <div *ngIf="house; else Primarytext">
+        <div class="col-lg-12">
+          <!-- Instanciamos el componente TableComoponent y le pasamos el valor del parametro del @Input-->
+          <app-table [houseSelected]="house"></app-table>
+
+        </div>
+      </div>
+      <ng-template #Primarytext>
+        <p class="text-center text">
+          Escuela de hechiceria y magia Hogwarts
+        </p>
+      </ng-template>
+    </div>
+  </div>
+</div>

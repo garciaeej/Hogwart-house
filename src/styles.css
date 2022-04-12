@@ -1,0 +1,28 @@
+body{
+    margin:0;
+    padding:0;
+    background: rgb(70, 62, 38);
+
+}
+
+/* .title h3{
+    font-family: 'Dancing Script', cursive;
+    font-weight:bolder;
+    font-size:x-large;
+    color: #000;
+    text-align: center;
+} */
+p.text{
+    font-family: 'Dancing Script', cursive;
+    font-weight:lighter;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+}
+
+ h3.title{
+    font-family: 'Dancing Script', cursive;
+    font-weight:bolder;
+    font-size:x-large;
+    color: #000;
+}

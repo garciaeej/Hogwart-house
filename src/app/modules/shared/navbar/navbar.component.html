@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-start">
+
+      <a class="navbar-brand"  routerLink="/">{{title}}</a>
+
+    </div>
+    <div class="d-flex justify-content-end gap-3">
+      <div class="dropdown">
+        <!-- Evento click para ir a la ruta home -->
+        <button (click)="homeRoute()" class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Houses
+        </button>
+        <ul ngClass="dropdown-menu" >
+          <!-- Recorre el arreglo de house -->
+          <!-- Evento click para obterner el valor de la casa seleccionada -->
+          <li (click)="obtenerCasa(house)" *ngFor="let house of houses" class="nav-item dropdown-item" >{{house}}</li>
+        </ul>
+
+      </div>
+      <!-- Rutas -->
+      <a class="nav-item" routerLink="/students">Students</a>
+
+      <a class="nav-item" routerLink="/new-student">New Student</a>
+
+      <a class="nav-item me-3" routerLink="/staff">Staff</a>
+    </div>
+
+  </div>
+</nav>

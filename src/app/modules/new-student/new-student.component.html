@@ -1,0 +1,124 @@
+<div class="container">
+
+    <div class="col-md-lg-12 my-3 pb-1 text-center">
+        <p class="text">Add New Student</p>
+
+    </div>
+    <div class="row">
+        <div class="col-md-7 offset-3">
+            <form (ngSubmit)="onSubmit()" [formGroup]="newStudentForm">
+
+                <div class="mb-4">
+                    <label for="name" class="form-label">
+                        <p class="text">Name</p>
+                    </label>
+                    <input type="email" class="form-control" name="name" id="name" placeholder="Harry Potter"
+                        formControlName="name" required>
+
+                    <!-- div para mostrar los errores de validacion -->
+                    <div *ngIf="newStudentForm.get('name')?.touched && newStudentForm.get('name')?.errors?.['required'] 
+                        " class="alert alert-danger"> Campo Requerido </div>
+                    <div *ngIf="newStudentForm.get('name')?.touched && newStudentForm.get('name')?.errors?.['minlength'] 
+                        " class="alert alert-danger"> Campo debe tener mas de
+                        {{newStudentForm.get('name')?.errors?.['minlength']?.requiredLength}} caracteres </div>
+
+                </div>
+
+                <div class="mb-4">
+                    <label for="patronus" class="form-label">
+                        <p class="text">Patronus</p>
+                    </label>
+                    <input type="email" class="form-control" name="patronus" id="patronus" placeholder="stag"
+                        formControlName="patronus" required>
+
+                    <!-- div para mostrar los errores de validacion -->
+                    <div *ngIf="newStudentForm.get('patronus')?.touched && newStudentForm.get('patronus')?.errors?.['required'] 
+                        " class="alert alert-danger"> Campo Requerido </div>
+                    <div *ngIf="newStudentForm.get('patronus')?.touched && newStudentForm.get('patronus')?.errors?.['minlength'] 
+                        " class="alert alert-danger"> Campo debe tener mas de
+                        {{newStudentForm.get('patronus')?.errors?.['minlength']?.requiredLength}} caracteres </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="house" id="gryffindor" value="gryffindor"
+                            formControlName="house">
+                        <label class="form-check-label" for="gryffindor">
+                            <p class="text">Gryffindor</p>
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="house" id="slytherin" value="slytherin"
+                            formControlName="house">
+                        <label class="form-check-label" for="slytherin">
+                            <p class="text">Slytherin</p>
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="house" id="ravenclaw" value="ravenclaw"
+                            formControlName="house">
+                        <label class="form-check-label" for="ravenclaw">
+                            <p class="text">Ravenclaw</p>
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="house" id="hufflepuff" value="hufflepuff"
+                            formControlName="house">
+                        <label class="form-check-label" for="hufflepuff">
+                            <p class="text">Hufflepuff</p>
+                        </label>
+                    </div>
+
+                    <div *ngIf="newStudentForm.get('house')?.errors?.['required'] 
+                    " class="alert alert-danger"> Campo Requerido </div>
+                </div>
+                <div class="mb-4">
+                    <label for="age" class="form-label">
+                        <p class="text">Age</p>
+                    </label>
+                    <input type="number" class="form-control" name="age" id="age" placeholder="18" formControlName="age"
+                        required>
+
+                    <!-- div para mostrar los errores de validacion -->
+                    <div *ngIf="newStudentForm.get('age')?.touched && newStudentForm.get('age')?.errors?.['required'] 
+                        " class="alert alert-danger"> Campo Requerido </div>
+                    <div *ngIf="newStudentForm.get('age')?.touched && newStudentForm.get('age')?.errors?.['min'] 
+                        " class="alert alert-danger"> Campo debe ser mayor de 18 </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female"
+                            formControlName="gender">
+                        <label class="form-check-label" for="genderFemale">
+                            <p class="text">Female</p>
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male"
+                            formControlName="gender">
+                        <label class="form-check-label" for="genderMale">
+                            <p class="text">Male</p>
+                        </label>
+                    </div>
+
+                    <!-- div para mostrar los errores de validacion -->
+                    <div *ngIf="newStudentForm.get('gender')?.errors?.['required'] 
+                    " class="alert alert-danger"> Campo Requerido </div>
+                </div>
+
+                <div class="btn-group" role="group" aria-label="Add New Student">
+                    <button [hidden]="newStudentForm.invalid" type="submit" class="btn btn-primary">
+                        <p class="text-btn">Add New Student</p>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

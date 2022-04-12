@@ -1,0 +1,42 @@
+th,td{
+    height: 80px !important;
+    color: rgb(136, 108, 6);
+    font-weight:500;
+    font-size:x-large;
+}
+
+table {
+    width: 100%;
+    background: #000;
+   font-family: 'Dancing Script', cursive;
+}
+
+/* Editamos en MAT-Paginator*/
+.mat-paginator{
+    background: rgb(136, 108, 6);
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  /*change color of label*/
+  ::ng-deep .mat-focused .mat-form-field-label {
+    color: rgb(136, 108, 6)!important;
+   }
+
+   ::ng-deep.mat-form-field-underline {
+    background-color: rgb(136, 108, 6) !important;
+  }  
+
+  /*change color of underline when focused*/
+  ::ng-deep.mat-form-field-ripple {
+    background-color: rgb(136, 108, 6) !important;
+   }
+
+
+   input{
+       font-size: large;
+       color: #000;
+   }
