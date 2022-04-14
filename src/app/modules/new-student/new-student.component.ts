@@ -54,34 +54,14 @@ export class NewStudentComponent implements OnInit {
       // Proceso para verificar la casa y agregarlo al LOCALSTORAGE de cada casa
       // Todos los condicionales IF realizan el mismo procedimiento para la casa seleccionada
 
-      // Casa "Gryffindor"
-      if (data.house === "gryffindor") {
+      // Si existe valor de la casa la funcion asignara el arreglo a la casa seleccionada
+      if (data.house) {
 
         this.asigHouse(arrayDataForm, data.house)
 
-      } // FIN IF Casa "Gryffindor"
-
-      // Casa "Slytherin"
-      if (data.house === "slytherin") {
-
-        this.asigHouse(arrayDataForm, data.house)
-
-      } // FIN IF Casa "Slytherin"
-
-      // Casa "Ravenclaw"
-      if (data.house === "ravenclaw") {
-
-        this.asigHouse(arrayDataForm, data.house)
-
-      }// FIN IF Casa "Ravenclaw"
-
-      // Casa "Hufflepuff"
-      if (data.house === "hufflepuff") {
-
-        this.asigHouse(arrayDataForm, data.house)
-
-      }// FIN IF Casa "Hufflepuff"
-
+      }
+      
+      
     })
 
 
